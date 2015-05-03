@@ -115,6 +115,10 @@ public class User implements Serializable {
 	public void setNumOfDeath(int numOfDeath) {
 		this.numOfDeath = numOfDeath;
 	}
+	
+	public void died(){
+		this.numOfDeath++;
+	}
 
 
 	public boolean keyPress(int keyCode) {

@@ -41,7 +41,7 @@ public class QuestionComposite extends Composite {
 	    
 	    
 	    TabItem tab2 = new TabItem(tab, SWT.NONE);
-	    tab2.setText("Solution");
+	    tab2.setText("Console");
 	    
 	  
 	    

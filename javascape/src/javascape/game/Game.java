@@ -46,11 +46,7 @@ public class Game {
 		canvas.addPaintListener(new PaintListener() {
 			public void paintControl(PaintEvent e) {
 				// Do some drawing
-				System.out.println("it doesnt work");
-
 				drawSection( e.gc);
-
-
 			} 
 
 		});
@@ -76,10 +72,6 @@ public class Game {
 		gamePlay.draw( gc);
 	}
 
-	
-	
-	
-	
 	//---------------------MAIN--------------------------
 	public static void main(String[] args) {  //Main Thread
 

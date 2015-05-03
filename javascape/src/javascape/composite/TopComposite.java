@@ -11,6 +11,7 @@ public class TopComposite extends Composite {
 	public  Button btnMusic;
 	public  Button btnMenu;
 	public  Button btnAdmin;
+	public Label lblDeath;
 	public Label lblScore;
 	public Label lblSection;
 	
@@ -20,26 +21,27 @@ public class TopComposite extends Composite {
 	}
 
 	private void initilize() {
-		 this.setLayout(new GridLayout(6, false));
-	        
-	         
-	        
-	         btnMusic=new Button(this,SWT.PUSH);
-	        btnMusic.setText("Music On");
-	        
-	         btnMenu=new Button(this,SWT.PUSH);
-	        btnMenu.setText("Menu");
-	        
+		this.setLayout(new GridLayout(7, false));
 
-	         btnAdmin=new Button(this,SWT.PUSH);
-	        btnAdmin.setText("AdminMode");
-	        	
-	        lblUserName=new Label(this,SWT.NONE);
-	        
-	        lblSection=new Label(this,SWT.NONE);
-	        	 lblScore=new Label(this,SWT.NONE);
-	        	
-		
+
+
+		btnMusic=new Button(this,SWT.PUSH);
+		btnMusic.setText("Music On");
+
+		btnMenu=new Button(this,SWT.PUSH);
+		btnMenu.setText("Menu");
+
+
+		btnAdmin=new Button(this,SWT.PUSH);
+		btnAdmin.setText("AdminMode");
+
+		lblUserName=new Label(this,SWT.NONE);
+
+		lblSection=new Label(this,SWT.NONE);
+		lblScore=new Label(this,SWT.NONE);
+		lblDeath=new Label(this,SWT.NONE);
+
+
 	}
 
 }

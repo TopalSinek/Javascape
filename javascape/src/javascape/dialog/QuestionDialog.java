@@ -4,7 +4,9 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 
 import javascape.composite.QuestionComposite;
+import javascape.game.Game;
 import javascape.model.Question;
+import javascape.util.UIUtil;
 
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.dialogs.IDialogConstants;
@@ -104,6 +106,7 @@ public class QuestionDialog extends Dialog{
 				
 				frm.txtError.setText(exceptionAsString);
 				frm.tab.setSelection(1);
+				Game.gamePlay.getUser().died();
 				return;
 			}
 			if(ret){
@@ -113,6 +116,11 @@ public class QuestionDialog extends Dialog{
 				
 				frm.txtError.setText("Code not working!");
 				frm.tab.setSelection(1);
+				Game.gamePlay.getUser().died();
+				if(Game.gamePlay.getUser().getNumOfDeath() >= 5){
+					UIUtil.showMsgBox(getShell(), "Wrong move!", "Sorry. You got cought!");
+					cancelPressed();
+				}
 				return;
 			}
 		}

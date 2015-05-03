@@ -425,11 +425,13 @@ public class GamePlay {
 		if(user!=null && topComposite!=null){
 			topComposite.lblScore.setText("Score: " + user.getScore());
 			topComposite.lblUserName.setText(user.getName());
+			topComposite.lblDeath.setText("Number of tries: " + user.getNumOfDeath());
 			topComposite.lblSection.setText(" Section: "+user.getSectionNum());
 		}
 		else if(user==null && topComposite!=null){
 			topComposite.lblScore.setText("Score: ");
 			topComposite.lblUserName.setText("");
+			topComposite.lblDeath.setText("Number of tries: ");
 			topComposite.lblSection.setText("");
 		}
 	}
