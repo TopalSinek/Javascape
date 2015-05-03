@@ -258,6 +258,12 @@ public class GamePlay {
 				gc.drawImage(imgComp, room.getComputerLocationX(), room.getComputerLocationY());
 			}
 
+
+
+
+
+
+
 		}
 
 		//draw user 
@@ -355,7 +361,7 @@ public class GamePlay {
 							room.setQuestionSolved(true);
 							UIUtil.showMsgBox(canvas.getShell(), "Congrulations", "You solved the question");
 							user.addScore(1);
-							
+
 							int solvedRoomNum=0;
 							for (Iterator iterator = section.getLstRooms().iterator(); iterator.hasNext();) {
 								Room roomX = (Room) iterator.next();
@@ -372,8 +378,6 @@ public class GamePlay {
 
 
 						}
-						else
-							redraw = true;
 					}
 
 
@@ -405,9 +409,13 @@ public class GamePlay {
 		return ret;
 	}
 
+
+
 	public boolean isTest() {
 		return test;
 	}
+
+
 
 	public void setTest(boolean test) {
 		this.test = test;
@@ -457,6 +465,8 @@ public class GamePlay {
 
 		return getCanvas().getShell();
 	}
+
+
 
 	public Vector getSaveData() { // adding user and secion data to vector object
 		Vector v=new Vector();

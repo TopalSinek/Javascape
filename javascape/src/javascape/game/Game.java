@@ -47,7 +47,6 @@ public class Game {
 			public void paintControl(PaintEvent e) {
 				// Do some drawing
 				drawSection( e.gc);
-			
 			} 
 
 		});
