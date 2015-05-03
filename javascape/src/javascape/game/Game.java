@@ -46,7 +46,7 @@ public class Game {
 		canvas.addPaintListener(new PaintListener() {
 			public void paintControl(PaintEvent e) {
 				// Do some drawing
-
+				System.out.println("it doesnt work");
 
 				drawSection( e.gc);
 
