@@ -373,6 +373,10 @@ public class GamePlay {
 
 						}
 						else
+							//Chekpoint Load TODO
+							if(user.getisDead()){
+								Game.load();
+							}
 							redraw = true;
 					}
 

@@ -119,7 +119,10 @@ public class QuestionDialog extends Dialog{
 				Game.gamePlay.getUser().died();
 				if(Game.gamePlay.getUser().getNumOfDeath() >= 5){
 					UIUtil.showMsgBox(getShell(), "Wrong move!", "Sorry. You got cought!");
+					Game.gamePlay.getUser().setisDead(true);
+					
 					cancelPressed();
+					
 				}
 				return;
 			}

@@ -249,7 +249,7 @@ public class Game {
 
 
 
-	private static void load(){ // load from vector object
+	protected static void load(){ // load from vector object
 		FileDialog fd=new FileDialog(gamePlay.getShell());
 		String fn=fd.open();
 		if(fn!=null){
