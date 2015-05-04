@@ -47,7 +47,6 @@ public class Game {
 			public void paintControl(PaintEvent e) {
 				// Do some drawing
 				drawSection( e.gc);
-				System.out.println("");
 			
 			} 
 
@@ -126,7 +125,7 @@ public class Game {
 			gamePlay.setTopComposite(topComposite); //initialize new top panel
 
 			gamePlay.setUser(user); // initialize new user
-			
+
 
 			gamePlay.setSection(section); // initialize new section
 
