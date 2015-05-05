@@ -3,7 +3,6 @@ package javascape.game;
 import java.util.Vector;
 
 import javascape.composite.TopComposite;
-import javascape.creater.SectionCreater;
 import javascape.dialog.MainDialog;
 import javascape.dialog.MenuDialog;
 import javascape.model.Definitions;
@@ -11,6 +10,7 @@ import javascape.model.Section;
 import javascape.model.User;
 import javascape.util.ExceptionHandler;
 import javascape.util.FileUtil;
+import javascape.util.SectionCreater;
 import javascape.util.SoundUtil;
 
 import org.eclipse.jface.window.Window;

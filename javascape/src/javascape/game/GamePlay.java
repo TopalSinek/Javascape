@@ -4,7 +4,6 @@ import java.util.Iterator;
 import java.util.Vector;
 
 import javascape.composite.TopComposite;
-import javascape.creater.SectionCreater;
 import javascape.dialog.QuestionDialog;
 import javascape.game.controler.DirectionControl;
 import javascape.game.controler.RoomFinder;
@@ -14,6 +13,7 @@ import javascape.model.Section;
 import javascape.model.User;
 import javascape.util.ImageUtil;
 import javascape.util.QuestionUtil;
+import javascape.util.SectionCreater;
 import javascape.util.SoundUtil;
 import javascape.util.UIUtil;
 
