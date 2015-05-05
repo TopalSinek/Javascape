@@ -109,7 +109,7 @@ public class SectionCreater {
 		room.setPoint2y(70);
 		room.setType(Room.TYPE_DOUBLE);
 		room.setDoorImageName("door");
-		room.setDoorOpen(false);
+		room.setDoorOpen(true);
 		room.setDoorDirection(Room.DIRECTION_DOOR_VER);
 		sec.getLstRooms().add(room);
 
