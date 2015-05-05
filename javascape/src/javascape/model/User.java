@@ -21,7 +21,7 @@ public class User implements Serializable {
 	private int location_y=50;
 	private int score;
 	
-	
+	private boolean isDead = false;
 	
 	private int location_xPoints=0;
 	private int location_yPoints=0;
@@ -32,8 +32,15 @@ public class User implements Serializable {
 		mode=Definitions.MODE_CS;
 		score=0;
 	}
-
-
+	
+	public boolean getisDead(){
+		return isDead;
+	}
+	
+	public void setisDead(boolean dead){
+		isDead = dead;
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -70,7 +77,8 @@ public class User implements Serializable {
 	public int getLocation_x() {
 		return location_x;
 	}
-
+	
+	
 
 	public void setLocation_x(int location_x) {
 		this.location_x = location_x;
