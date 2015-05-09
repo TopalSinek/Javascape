@@ -1,7 +1,9 @@
 package javascape.dialog;
-
+import org.eclipse.swt.widgets.MessageBox;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javascape.composite.QuestionComposite;
 import javascape.game.Game;
@@ -88,6 +90,34 @@ public class QuestionDialog extends Dialog{
 	@Override
 	protected void okPressed() {
 		clearError();
+		// -------------------EGE--------------------- 09/05/15
+		//Timer'ý buraya yazýyorum ama hiç emin deðilim bok da çýkabilir. 
+		Timer looptimer = new Timer();
+		
+		TimerTask loopdetector = new TimerTask() {
+			final int LOOPDETECTTIME = 10;
+			int sayac = 0; //Bu sayacý da declerationlarýn oldugu yere taþýyabiliriz
+			@Override 
+			public void run() {
+				sayac++;
+				//Loop detect time'ý da ayný þekilde constant declerationlarýn oldugu yere taþýyabiliriz. Öyle mavi falan durunca cok hoþuma gidiyor ;))
+				if(sayac == LOOPDETECTTIME){
+					MessageBox msg = new MessageBox(getShell()); //shell'i böyle alacaðýmdan emin deðilim
+					msg.setText("Looks like you got into a infinite loop");
+					msg.open();
+					looptimer.cancel();
+				}
+					//Burda Question dialogu direk kapat diyip bi messagebox gösterelim bence ama nasýl kapatacaðýmý bilemedim
+					//Bi de burda adamýn caný gidicek mi gidicekse onu da ayaralamak lazým
+					//Öptüm :*
+			}
+			
+		};
+		
+		looptimer.schedule(loopdetector , 0 , 1000);
+		
+		
+		
 		
 		String javaCode=frm.txtAnswer.getText();
 		if(javaCode.trim().length()==0){
