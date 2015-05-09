@@ -1,5 +1,4 @@
 package javascape.dialog;
-import org.eclipse.swt.widgets.MessageBox;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.Timer;
@@ -91,25 +90,25 @@ public class QuestionDialog extends Dialog{
 	protected void okPressed() {
 		clearError();
 		// -------------------EGE--------------------- 09/05/15
-		//Timer'ı buraya yazıyorum ama hiç emin değilim bok da çıkabilir. 
+		//Timer'Ã½ buraya yazÃ½yorum ama hiÃ§ emin deÃ°ilim bok da Ã§Ã½kabilir. 
+		
+		// utku - test etmemizin neredeyse hiÃ§ bir yolu yok ama sanirim bir iÅŸe yaramiyo :D
 		Timer looptimer = new Timer();
 		
 		TimerTask loopdetector = new TimerTask() {
 			final int LOOPDETECTTIME = 10;
-			int sayac = 0; //Bu sayacı da declerationların oldugu yere taşıyabiliriz
+			int sayac = 0; //Bu sayacÃ½ da declerationlarÃ½n oldugu yere taÃ¾Ã½yabiliriz
 			@Override 
 			public void run() {
 				sayac++;
-				//Loop detect time'ı da aynı şekilde constant declerationların oldugu yere taşıyabiliriz. Öyle mavi falan durunca cok hoşuma gidiyor ;))
+				//Loop detect time'Ã½ da aynÃ½ Ã¾ekilde constant declerationlarÃ½n oldugu yere taÃ¾Ã½yabiliriz. Ã–yle mavi falan durunca cok hoÃ¾uma gidiyor ;))
 				if(sayac == LOOPDETECTTIME){
-					MessageBox msg = new MessageBox(getShell()); //shell'i böyle alacağımdan emin değilim
-					msg.setText("Looks like you got into a infinite loop");
-					msg.open();
+					UIUtil.showMsgBox(getShell(), "Infinite loop", "You got into an infinite loop"); // mesaj gÃ¶stermek istediÄŸinizde  ui utili kullanÄ±n massage box aÃ§mayÄ±n yeni.
 					looptimer.cancel();
 				}
-					//Burda Question dialogu direk kapat diyip bi messagebox gösterelim bence ama nasıl kapatacağımı bilemedim
-					//Bi de burda adamın canı gidicek mi gidicekse onu da ayaralamak lazım
-					//Öptüm :*
+					//Burda Question dialogu direk kapat diyip bi messagebox gÃ¶sterelim bence ama nasÃ½l kapatacaÃ°Ã½mÃ½ bilemedim
+					//Bi de burda adamÃ½n canÃ½ gidicek mi gidicekse onu da ayaralamak lazÃ½m
+					//Ã–ptÃ¼m :*
 			}
 			
 		};
