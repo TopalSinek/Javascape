@@ -103,7 +103,7 @@ public class QuestionDialog extends Dialog{
 				sayac++;
 				//Loop detect time'ý da ayný þekilde constant declerationlarýn oldugu yere taþýyabiliriz. Öyle mavi falan durunca cok hoþuma gidiyor ;))
 				if(sayac == LOOPDETECTTIME){
-					UIUtil.showMsgBox(getShell(), "Infinite loop", "You got into an infinite loop"); // mesaj göstermek istediğinizde  ui utili kullanın massage box açmayın yeni.
+					UIUtil.showMsgBox(Game.gamePlay.getShell(), "Infinite loop", "You got into an infinite loop"); // mesaj göstermek istediğinizde  ui utili kullanın massage box açmayın yeni.
 					looptimer.cancel();
 				}
 					//Burda Question dialogu direk kapat diyip bi messagebox gösterelim bence ama nasýl kapatacaðýmý bilemedim
@@ -113,7 +113,13 @@ public class QuestionDialog extends Dialog{
 			
 		};
 		
-		looptimer.schedule(loopdetector , 0 , 1000);
+		try {
+			looptimer.schedule(loopdetector , 0 , 1000);
+		} catch (Exception e1) {
+			UIUtil.showMsgBox(Game.gamePlay.getShell(), "Infinite loop", "You got into an infinite loop"); // mesaj göstermek istediğinizde  ui utili kullanın massage box açmayın yeni.
+			looptimer.cancel();
+			e1.printStackTrace();
+		}
 		
 		
 		
@@ -139,6 +145,7 @@ public class QuestionDialog extends Dialog{
 				return;
 			}
 			if(ret){
+				looptimer.cancel();
 				super.okPressed();
 			}
 			else{
@@ -149,7 +156,7 @@ public class QuestionDialog extends Dialog{
 				if(Game.gamePlay.getUser().getNumOfDeath() >= 5){
 					UIUtil.showMsgBox(getShell(), "Wrong move!", "Sorry. You got cought!");
 					Game.gamePlay.getUser().setisDead(true);
-					
+					looptimer.cancel();
 					cancelPressed();
 					
 				}
