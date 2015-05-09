@@ -42,7 +42,7 @@ public class Game {
 
 
 	private static void draw(Canvas canvas){ // create and draw canvas
-		System.out.println("cgds was here");
+		System.out.println("cgds was t");
 		canvas.addPaintListener(new PaintListener() {
 			public void paintControl(PaintEvent e) {
 				// Do some drawing
