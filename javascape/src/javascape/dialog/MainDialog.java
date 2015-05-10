@@ -1,10 +1,6 @@
 package javascape.dialog;
 
-import java.io.IOException;
-
 import javascape.composite.MainComposite;
-import javascape.test.CompileSourceInMemory;
-import javascape.test.TestSectionCreation;
 
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.dialogs.IDialogConstants;
@@ -28,14 +24,10 @@ public class MainDialog extends Dialog{
 	public MainDialog(Shell shell) {
 		super(shell);
 		setShellStyle(getShellStyle() | SWT.ON_TOP | SWT.MIN | SWT.MAX);
-		
-	
 	}
 	
 	
 	private void addListeners(){
-		
-		
 		
 		frm.lbluser.setText("User Name");
 		frm.txtName.setText("utku");
@@ -54,6 +46,7 @@ public class MainDialog extends Dialog{
 				}
 			}
 		});
+		
 		frm.btnExit.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
@@ -71,28 +64,27 @@ public class MainDialog extends Dialog{
 					fileName=fn;
 					okPressed();
 				}
-				
-				
-				TestSectionCreation.createSection(true);
 			}
 		});
+		
 		frm.btnCredit.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				try {
-					CompileSourceInMemory.main(null);
-				} catch (IOException e1) {
-					
-					e1.printStackTrace();
-				}
+				//Credits TODO
 			}
 		});
 		
 		frm.btnOptions.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				QuestionDialog dgQ=new QuestionDialog(frm.getShell());
-				dgQ.open();
+				//Options TODO
+			}
+		});
+		
+		frm.btnHelp.addSelectionListener(new SelectionAdapter(){
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				//Help TODO
 			}
 		});
 		

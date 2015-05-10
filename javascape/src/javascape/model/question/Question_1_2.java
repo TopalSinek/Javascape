@@ -23,15 +23,15 @@ public class Question_1_2 extends Question {
 		resB = backAroundMethod.invoke(myClass.newInstance(), "a");
 		String baS3 = (String) (resB);
 
-		if (baS1.equals("tcatt") && baS2.equals("oHelloo")
-				&& baS3.equals("aaa"))
+		if (baS1.equals("tcatt") && baS2.equals("oHelloo") && baS3.equals("aaa"))
 			return true;
 
 		return false;
 	}
 
 	public String getTextInside() {
-		return "public String backAround(String str) {\n" + "}";
+		return "public String backAround(String str) {\n" 
+				+ "}";
 	}
 
 }

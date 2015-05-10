@@ -37,7 +37,8 @@ public class Question_2_3 extends Question {
 	}
 
 	public String getTextInside() {
-		return "public int countClumps(int[] nums) {\n" + "}";
+		return "public int countClumps(int[] nums) {\n" 
+				+ "}";
 	}
 
 }

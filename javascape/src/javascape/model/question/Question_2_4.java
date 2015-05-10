@@ -40,7 +40,8 @@ public class Question_2_4 extends Question {
 	}
 
 	public String getTextInside() {
-		return "public int[] seriesUp(int n) {\n" + "}";
+		return "public int[] seriesUp(int n) {\n" 
+				+ "}";
 	}
 
 }

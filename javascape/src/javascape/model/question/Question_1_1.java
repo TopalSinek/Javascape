@@ -30,7 +30,8 @@ public class Question_1_1 extends Question {
 	}
 
 	public String getTextInside() {
-		return "public static boolean icyHot(int temp1,int temp2) {\n" + "}";
+		return "public static boolean icyHot(int temp1,int temp2) {\n" 
+				+ "}";
 	}
 
 }

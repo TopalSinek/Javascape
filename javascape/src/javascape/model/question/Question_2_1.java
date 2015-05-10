@@ -37,7 +37,8 @@ public class Question_2_1 extends Question {
 	}
 
 	public String getTextInside() {
-		return "public int[] squareUp(int n) {\n" + "}";
+		return "public int[] squareUp(int n) {\n" 
+				+ "}";
 	}
 
 }

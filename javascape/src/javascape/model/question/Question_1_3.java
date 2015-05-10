@@ -29,7 +29,8 @@ public class Question_1_3 extends Question {
 	}
 
 	public String getTextInside() {
-		return "public int blackjack(int a, int b) {\n" + "}";
+		return "public int blackjack(int a, int b) {\n" 
+				+ "}";
 	}
 
 }

@@ -37,7 +37,8 @@ public class Question_2_2 extends Question {
 	}
 
 	public String getTextInside() {
-		return "public int maxMirror(int[] nums) {\n" + "}";
+		return "public int maxMirror(int[] nums) {\n" 
+				+ "}";
 	}
 
 }
