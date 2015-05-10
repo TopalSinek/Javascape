@@ -31,7 +31,7 @@ public class MainDialog extends Dialog{
 	private void addListeners(){
 		
 		frm.lbluser.setText("User Name");
-		frm.txtName.setText("Bulbo Baggins");
+		frm.txtName.setText("Tester");
 		frm.btnNew.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
@@ -79,9 +79,9 @@ public class MainDialog extends Dialog{
 				String creditsmsg = "*-*-*-Developers-*-*-* \n" //We can declare them in somewhere else 
 						+ "Ege Yosunkaya \n"
 						+ "Utku Oymak \n"
-						+ "Çaðdaþ Yýlmaz \n"
+						+ "Çagdas Yilmaz \n"
 						+ "Burcu Doyuran \n"
-						+ "Mustafa Duymuþ \n"
+						+ "Mustafa Duymus \n"
 						+ "\n \t Version 1.0";
 				
 				UIUtil.showMsgBox(getShell(), "CREDITS", creditsmsg);
@@ -108,7 +108,8 @@ public class MainDialog extends Dialog{
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				//Help TODO
-				String helpmsg = "Progression of the game depends on your capability to write Java methods.\n\n" 
+				String helpmsg ="You can move using the arrow keys. \n\n"
+								+ "Progression of the game depends on your capability to write Java methods.\n\n" 
 								+ "Doors can be opened by pressing 'E' depending on solving the previous problems.\n\n"
 								+ "Problems can opened by pressing 'Q' near computers.\n\n"
 								+ "You can advance to a new section by completing all problems inside your current section.";
