@@ -110,7 +110,6 @@ public class QuestionDialog extends Dialog{
 					//Bi de burda adamýn caný gidicek mi gidicekse onu da ayaralamak lazým
 					//Öptüm :*
 			}
-			
 		};
 		
 		try {
