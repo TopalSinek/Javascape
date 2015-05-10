@@ -1,6 +1,7 @@
 package javascape.dialog;
 
 import javascape.composite.MainComposite;
+import javascape.util.UIUtil;
 
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.dialogs.IDialogConstants;
@@ -67,27 +68,53 @@ public class MainDialog extends Dialog{
 			}
 		});
 		
+		
+		//------------------------EGE------------------------------------
+		//Credits Button
+	    //Opens a new window with our names , i will write my name at the top of the list by the way :*
 		frm.btnCredit.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				//Credits TODO
+				String creditsmsg = "*-*-*-Developers-*-*-* \n" //We can declare them in somewhere else 
+						+ "Ege Yosunkaya \n"
+						+ "Utku Oymak \n"
+						+ "Cagdas Yýlmaz \n"
+						+ "Burcu Uslu \n"
+						+ "Mustafa Duymus \n"
+						+ "\n \t Version 1.0";
+				
+				UIUtil.showMsgBox(getShell(), "CREDITS", creditsmsg);
 			}
 		});
+		
+		//Opens a new window , writing coming soon for now.... 
 		
 		frm.btnOptions.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				//Options TODO
+				String optionsmsg = "Coming Soon!!"; //We can declare them in somewhere else 
+				
+				UIUtil.showMsgBox(getShell(), "OPTIONS", optionsmsg);
+				
 			}
 		});
 		
+		
+		
+
 		frm.btnHelp.addSelectionListener(new SelectionAdapter(){
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				//Help TODO
+				String helpmsg = ""; // Someone fill here pls :(
+				
+				UIUtil.showMsgBox(getShell(), "HELP", helpmsg);
 			}
 		});
 		
+		//---------------------Ege End--------------------------------------
 	}
 	
 	private void clearError(){

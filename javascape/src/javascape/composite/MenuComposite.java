@@ -42,6 +42,8 @@ public class MenuComposite extends Composite {
 		btnExit.setText("Exit");
 		
 		
+		
+		
 		GridData gridData = new GridData(GridData.CENTER | GridData.FILL_HORIZONTAL | GridData.FILL_VERTICAL);
 		gridData.horizontalSpan = 1;
 		gridData.widthHint=150;
