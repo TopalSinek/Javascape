@@ -60,8 +60,6 @@ public class Game {
 				super.keyPressed(e);
 
 			}
-
-
 		});
 
 
