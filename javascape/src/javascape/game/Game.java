@@ -150,7 +150,7 @@ public class Game {
 
 						System.out.println("Done");
 
-					}catch(Exception ex){
+					}catch(java.lang.Exception ex){
 						ExceptionHandler.handleException(gamePlay.getShell(), ex);
 						ex.printStackTrace();
 					}
@@ -193,7 +193,7 @@ public class Game {
 		Vector v = null;
 		try{
 			v = FileUtil.getVectorFromFile(fileName);
-		}catch(Exception ex){
+		}catch(java.lang.Exception ex){
 			ExceptionHandler.handleException(gamePlay.getShell(), ex);
 			ex.printStackTrace();
 		}
