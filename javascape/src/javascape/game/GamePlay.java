@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.Vector;
 
 import javascape.composite.TopComposite;
+import javascape.dialog.MainDialog;
 import javascape.dialog.QuestionDialog;
 import javascape.game.controler.DirectionControl;
 import javascape.game.controler.RoomFinder;
@@ -368,11 +369,24 @@ public class GamePlay {
 								if(roomX.isQuestionSolved())
 									solvedRoomNum++;
 							}
+							
+							//End Game
+							if(section.getSectionNum() == 2){
+								if(solvedRoomNum==section.getLstRooms().size()){
+									UIUtil.showMsgBox(canvas.getShell(), "Congrulations", "Congrulations. You have finished the game!");
+									//TODO--- Still revising
+								
+									MainDialog dg=new MainDialog(getShell()); // create main dialog
+									
+									Game.gameStart(getShell(), dg,getShell().getDisplay() );
+								}
+							}
 
-							if(solvedRoomNum==section.getLstRooms().size()){
+							else if(solvedRoomNum==section.getLstRooms().size()){
 								user.nextSction();
 								UIUtil.showMsgBox(canvas.getShell(), "Congrulations", "Congrulations. Go to Next Section");
 								section=SectionCreater.createSection(user.getSectionNum());
+								solvedRoomNum = 0;
 								redraw=true;
 							}
 

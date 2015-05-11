@@ -98,7 +98,7 @@ public class SectionCreater {
 		sec.setId(2);
 
 		int roomId=1;
-		sec.setSectionNum(1);
+		sec.setSectionNum(2);
 		sec.setWallImageName("wall.jpg");
 
 		Room room = new Room();

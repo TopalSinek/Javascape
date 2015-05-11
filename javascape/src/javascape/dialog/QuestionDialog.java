@@ -1,8 +1,6 @@
 package javascape.dialog;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import javascape.composite.QuestionComposite;
 import javascape.game.Game;
@@ -93,32 +91,32 @@ public class QuestionDialog extends Dialog{
 		//Timer'ý buraya yazýyorum ama hiç emin deðilim bok da çýkabilir. 
 		
 		// utku - test etmemizin neredeyse hiç bir yolu yok ama sanirim bir işe yaramiyo :D
-		Timer looptimer = new Timer();
-		
-		TimerTask loopdetector = new TimerTask() {
-			final int LOOPDETECTTIME = 10;
-			int sayac = 0; //Bu sayacý da declerationlarýn oldugu yere taþýyabiliriz
-			@Override 
-			public void run() {
-				sayac++;
-				//Loop detect time'ý da ayný þekilde constant declerationlarýn oldugu yere taþýyabiliriz. Öyle mavi falan durunca cok hoþuma gidiyor ;))
-				if(sayac == LOOPDETECTTIME){
-					UIUtil.showMsgBox(Game.gamePlay.getShell(), "Infinite loop", "You got into an infinite loop"); // mesaj göstermek istediğinizde  ui utili kullanın massage box açmayın yeni.
-					looptimer.cancel();
-				}
-					//Burda Question dialogu direk kapat diyip bi messagebox gösterelim bence ama nasýl kapatacaðýmý bilemedim
-					//Bi de burda adamýn caný gidicek mi gidicekse onu da ayaralamak lazým
-					//Öptüm :*
-			}
-		};
-		
-		try {
-			looptimer.schedule(loopdetector , 0 , 1000);
-		} catch (Exception e1) {
-			UIUtil.showMsgBox(Game.gamePlay.getShell(), "Infinite loop", "You got into an infinite loop"); // mesaj göstermek istediğinizde  ui utili kullanın massage box açmayın yeni.
-			looptimer.cancel();
-			e1.printStackTrace();
-		}
+//		Timer looptimer = new Timer();
+//		
+//		TimerTask loopdetector = new TimerTask() {
+//			final int LOOPDETECTTIME = 10;
+//			int sayac = 0; //Bu sayacý da declerationlarýn oldugu yere taþýyabiliriz
+//			@Override 
+//			public void run() {
+//				sayac++;
+//				//Loop detect time'ý da ayný þekilde constant declerationlarýn oldugu yere taþýyabiliriz. Öyle mavi falan durunca cok hoþuma gidiyor ;))
+//				if(sayac == LOOPDETECTTIME){
+//					UIUtil.showMsgBox(Game.gamePlay.getShell(), "Infinite loop", "You got into an infinite loop"); // mesaj göstermek istediğinizde  ui utili kullanın massage box açmayın yeni.
+//					looptimer.cancel();
+//				}
+//					//Burda Question dialogu direk kapat diyip bi messagebox gösterelim bence ama nasýl kapatacaðýmý bilemedim
+//					//Bi de burda adamýn caný gidicek mi gidicekse onu da ayaralamak lazým
+//					//Öptüm :*
+//			}
+//		};
+//		
+//		try {
+//			looptimer.schedule(loopdetector , 0 , 1000);
+//		} catch (Exception e1) {
+//			UIUtil.showMsgBox(Game.gamePlay.getShell(), "Infinite loop", "You got into an infinite loop"); // mesaj göstermek istediğinizde  ui utili kullanın massage box açmayın yeni.
+//			looptimer.cancel();
+//			e1.printStackTrace();
+//		}
 		
 		
 		
@@ -144,7 +142,7 @@ public class QuestionDialog extends Dialog{
 				return;
 			}
 			if(ret){
-				looptimer.cancel();
+//				looptimer.cancel();
 				super.okPressed();
 			}
 			else{
@@ -155,7 +153,7 @@ public class QuestionDialog extends Dialog{
 				if(Game.gamePlay.getUser().getNumOfDeath() >= 5){
 					UIUtil.showMsgBox(getShell(), "Wrong move!", "Sorry. You got cought!");
 					Game.gamePlay.getUser().setisDead(true);
-					looptimer.cancel();
+//					looptimer.cancel();
 					cancelPressed();
 					
 				}
