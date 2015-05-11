@@ -395,7 +395,6 @@ public class GamePlay {
 
 						else
 							//Chekpoint Load TODO
-							//Burasý tamamlandý mý ya? - Ege
 							if(user.getisDead()){
 								Game.load();
 							}

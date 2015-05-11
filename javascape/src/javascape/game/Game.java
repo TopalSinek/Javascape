@@ -164,7 +164,30 @@ public class Game {
 		}
 
 	}
+	
 
+//TODO
+// Buraya unclosable bir file dialog yapmamız lazım!!!
+//	protected static void reload(){ // reload from vector object
+//		FileDialog fd=new FileDialog(gamePlay.getShell());
+//		
+//		String fn=fd.open();
+//		if(fn!=null){
+//
+//			Vector v=load(fn);
+//			if(v!=null){
+//				User u=(User)v.get(0);
+//				Section s=(Section)v.get(1);
+//				gamePlay.setUser(u);
+//				gamePlay.setSection(s);
+//				gamePlay.redraw();
+//				gamePlay.printUser();
+//			}
+//			System.out.println("Done");
+//
+//
+//		}
+//	}
 
 
 	protected static void load(){ // load from vector object

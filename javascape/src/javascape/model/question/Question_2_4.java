@@ -26,14 +26,29 @@ public class Question_2_4 extends Question {
 
 		resB = seriesUpMethod.invoke(myClass.newInstance(), 6);
 		int[] seriesI4 = (int[]) (resB);
+		
 		int[] res1 = {};
 		int[] res2 = { 1 };
 		int[] res3 = { 1, 1, 2, 1, 2, 3, 1, 2, 3, 4 };
 		int[] res4 = { 1, 1, 2, 1, 2, 3, 1, 2, 3, 4, 1, 2, 3, 4, 5, 1, 2, 3, 4,
 				5, 6 };
 
-		if (seriesI1.equals(res1) && seriesI2.equals(res2) && seriesI3.equals(res3) && seriesI4.equals(res4))
+		if (controlArray(seriesI1, res1) && controlArray(seriesI2, res2) && 
+				controlArray(seriesI3 , res3) && controlArray(seriesI4  , res4))
 			return true;
+		return false;
+	}
+	
+	public boolean controlArray(int[] a,int[]b){
+		if(a.length==b.length){
+			if(a.length==0)
+				return true;
+			for (int i = 0; i < b.length; i++) {
+				if(a[i]!=b[i])
+					return false;
+			}
+			return true;
+		}
 		return false;
 	}
 
