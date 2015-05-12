@@ -59,12 +59,7 @@ public class Room  implements Serializable{
 	public void setId(int id) {
 		this.id = id;
 	}
-//	public int getSection() {
-//		return sectionNum;
-//	}
-//	public void setSection(int section) {
-//		this.sectionNum = section;
-//	}
+
 	public String getDifficulty() {
 		return difficulty;
 	}

@@ -28,7 +28,7 @@ public class MenuComposite extends Composite {
 	
 		
 		btnRestart=new Button(this, SWT.PUSH);
-		btnRestart.setText("Restart");
+		btnRestart.setText("Main menu");
 		
 		
 		btnSave=new Button(this, SWT.PUSH);
@@ -40,8 +40,6 @@ public class MenuComposite extends Composite {
 		
 		btnExit = new Button(this,SWT.PUSH);
 		btnExit.setText("Exit");
-		
-		
 		
 		
 		GridData gridData = new GridData(GridData.CENTER | GridData.FILL_HORIZONTAL | GridData.FILL_VERTICAL);

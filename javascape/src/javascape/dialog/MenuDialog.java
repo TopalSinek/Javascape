@@ -30,7 +30,7 @@ public class MenuDialog extends Dialog{
 		frm.btnRestart.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				action="RESTART";
+				action="MAIN MENU";
 					okPressed();
 				
 			}

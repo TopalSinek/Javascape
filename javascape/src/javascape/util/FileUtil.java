@@ -34,22 +34,14 @@ public class FileUtil {
 		Section sec=readSectionFromFile("d:/utku.txt");
 		System.out.println("Test");
 	}
-	
-	
-//	wallImage:wall.jpg
-//	Room:1
-//	locP1:30
-//	locP2:20
-//	Room:2
-//	locP1:50
-//	locP2:20
+
 	public static Section readSectionFromFile(String fileName){
 		Section sec=null;
 		try {
 			
 			FileReader fr=new FileReader(new File(fileName));
 			
-			//BufferedReader br = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+			
 			BufferedReader bf=new BufferedReader(fr);
 			int strNum=1;
 			String line=bf.readLine();

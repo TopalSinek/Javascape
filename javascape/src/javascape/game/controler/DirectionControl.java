@@ -67,7 +67,7 @@ public class DirectionControl {
 			if(keyCode==Definitions.KEY_UP){ //creating collision box for up key
 				if(room.isSingle()){ // single rooms
 					boolean control=true;
-					if(room.isDoorOpen()){ // making the doors passable when open with some crazy ass math calculation
+					if(room.isDoorOpen()){ // making the doors passable when open 
 						if(Room.DIRECTION_DOOR_HOR.equals(room.getDoorDirection())){
 							if(room.getDoor_loc_x()<user.getLocation_xPoints() && room.getDoor_loc_x()+48>user.getLocation_xPoints())
 								control=false;
@@ -82,7 +82,7 @@ public class DirectionControl {
 					}
 					if(control){ // if statement to check admin mode
 						//x control
-						if(room.isLeftDirection()){ // Left sing rooms (crazy ass math again!)
+						if(room.isLeftDirection()){ // Left sing rooms 
 							if(room.getPoint1x()+x_bound-icrement_x>=user.getLocation_x()){
 								if(user.getLocation_y()>room.getPoint1y() &&  (user.getLocation_y()-room.getPoint1y())<y_bound){
 									ret=false;
@@ -160,7 +160,7 @@ public class DirectionControl {
 					}
 				}
 			}
-			else if(keyCode==Definitions.KEY_DOWN){ // collision control for down key ( its getting repetitive a little bit)
+			else if(keyCode==Definitions.KEY_DOWN){ // collision control for down key 
 				if(room.isSingle()){
 
 					boolean control=true;
@@ -202,7 +202,7 @@ public class DirectionControl {
 				}
 				else{  //double
 					boolean control=true;
-					if(room.isDoorOpen()){ // fuck you passable door
+					if(room.isDoorOpen()){ 
 						if(Room.DIRECTION_DOOR_HOR.equals(room.getDoorDirection())){
 							if(room.getDoor_loc_x()<user.getLocation_xPoints() && room.getDoor_loc_x()+48>user.getLocation_xPoints())
 								control=false;
@@ -215,7 +215,7 @@ public class DirectionControl {
 						}
 					}
 					if(control){
-						if(room.isLeftDirection()){ // fuck  this repetitive shit
+						if(room.isLeftDirection()){ 
 							if(room.getPoint1x()+x_bound-icrement_x>=user.getLocation_x()){
 								if(user.getLocation_y()<room.getPoint1y() &&  (room.getPoint1y()-user.getLocation_y())<y_bound){
 									ret=false;

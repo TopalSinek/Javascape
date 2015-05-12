@@ -23,8 +23,6 @@ public class TopComposite extends Composite {
 	private void initilize() {
 		this.setLayout(new GridLayout(7, false));
 
-
-
 		btnMusic=new Button(this,SWT.PUSH);
 		btnMusic.setText("Music On");
 

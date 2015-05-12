@@ -37,19 +37,13 @@ public class MainComposite extends Composite {
 
 	private void initialize() {
 		
-		
-		
 		lblLogo = new Label(this,SWT.BORDER);
 		InputStream is=new Dummy().getClass().getResourceAsStream("MainLogo.jpg");
 		Image logo = new Image(getDisplay(),is);
 		lblLogo.setImage(logo);
     
-	   
-		
 		btnNew=new Button(this, SWT.PUSH);
 		btnNew.setText("New Game");
-		
-		
 		
 		btnLoad=new Button(this, SWT.PUSH);
 		btnLoad.setText("Load");
@@ -72,21 +66,15 @@ public class MainComposite extends Composite {
 		
 		txtName=new Text(this,SWT.BORDER);
 		
-		//txtName.set
+	
 		
 		lblError=new Label(this,SWT.NONE);
 		
-
-
 		GridData gridData = new GridData(SWT.CENTER,this.getBorderWidth()/2,true,false);
 		gridData.horizontalSpan = 1;
-		
-//		gridData.minimumHeight = 350;
-//		gridData.minimumWidth = 400;
 		gridData.widthHint=300;
 		gridData.heightHint = 55;
-		
-//		gridData.grabExcessHorizontalSpace=true;
+	
 		
 		GridData gridDataNew = new GridData(SWT.CENTER,this.getBorderWidth()/2,true,false);
 		gridDataNew.horizontalSpan = 1;
@@ -120,7 +108,7 @@ public class MainComposite extends Composite {
 		
 		this.setLayout(gridLayout);
 		
-//		this.pack();
+
 		Monitor mon = Display.getDefault().getMonitors()[0];
 		Rectangle rect = mon.getBounds();
 		setSize(new Point(rect.width,rect.height));

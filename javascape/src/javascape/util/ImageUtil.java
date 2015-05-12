@@ -42,7 +42,6 @@ public class ImageUtil {
 		
 		public static Image getQuestionImg(Room room){
 			String fN="QUES_"+(room.getSectionNum())+"_"+(room.getId())+".jpg";
-			//System.out.println("fN "+fN);
 			InputStream is=new DummyQuestion().getClass().getResourceAsStream(fN);
 			if(is==null)
 				return null;

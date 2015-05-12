@@ -26,8 +26,7 @@ public class QuestionComposite extends Composite {
     
 	   
 	    lblImage=new Label(this, SWT.BORDER);
-//	    lblImage.setImage(question);
-	    
+  
 	    
 	     tab = new TabFolder(this, SWT.NONE);
 	    

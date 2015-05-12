@@ -160,6 +160,12 @@ public class Game {
 				load();
 
 			}
+			
+			else if("MAIN MENU".equals(action)){
+				MainDialog dg2=new MainDialog(gamePlay.getShell()); // create main dialog
+				
+				Game.gameStart(gamePlay.getShell(), dg2,gamePlay.getShell().getDisplay() );
+			}
 
 		}
 

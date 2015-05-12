@@ -36,9 +36,6 @@ public class QuestionDialog extends Dialog{
 
 	private void addListeners(){
 
-
-
-
 		frm.txtError.setVisible(false);
 		//	getShell().setFullScreen(true);
 		if(questionImg!=null)
@@ -90,7 +87,7 @@ public class QuestionDialog extends Dialog{
 		// -------------------EGE--------------------- 09/05/15
 		//Timer'ý buraya yazýyorum ama hiç emin deðilim bok da çýkabilir. 
 
-		// utku - test etmemizin neredeyse hiç bir yolu yok ama sanirim bir işe yaramiyo :D
+		// utku - test etmemizin neredeyse hiç bir yolu yok ama sanirim bir işe yaramiyo 
 		//		Timer looptimer = new Timer();
 		//		
 		//		TimerTask loopdetector = new TimerTask() {
@@ -118,9 +115,6 @@ public class QuestionDialog extends Dialog{
 		//			e1.printStackTrace();
 		//		}
 
-
-
-
 		String javaCode=frm.txtAnswer.getText();
 		if(javaCode.trim().length()==0){
 			frm.txtError.setText("Write a code");
@@ -145,51 +139,51 @@ public class QuestionDialog extends Dialog{
 					//looptimer.cancel();
 					cancelPressed();
 				}
-			
-			return;
-		}
-		if(ret){
-			//looptimer.cancel();
-			super.okPressed();
+
+				return;
+			}
+			if(ret){
+				//looptimer.cancel();
+				super.okPressed();
+			}
+			else{
+
+				frm.txtError.setText("Code not working!");
+				frm.tab.setSelection(1);
+				Game.gamePlay.getUser().died();
+				if(Game.gamePlay.getUser().getNumOfDeath() >= 5){
+					UIUtil.showMsgBox(getShell(), "Wrong move!", "Sorry. You got cought!");
+					Game.gamePlay.getUser().setisDead(true);
+					//					looptimer.cancel();
+					cancelPressed();
+
+				}
+				return;
+			}
 		}
 		else{
-
-			frm.txtError.setText("Code not working!");
+			frm.txtError.setText("System Error");
 			frm.tab.setSelection(1);
-			Game.gamePlay.getUser().died();
-			if(Game.gamePlay.getUser().getNumOfDeath() >= 5){
-				UIUtil.showMsgBox(getShell(), "Wrong move!", "Sorry. You got cought!");
-				Game.gamePlay.getUser().setisDead(true);
-				//					looptimer.cancel();
-				cancelPressed();
-
-			}
 			return;
 		}
-	}
-	else{
-		frm.txtError.setText("System Error");
-		frm.tab.setSelection(1);
-		return;
+
+
 	}
 
+	@Override
+	protected void cancelPressed() {
+		super.cancelPressed();
+	}
 
-}
+	public QuestionComposite getFrm() {
+		return frm;
+	}
 
-@Override
-protected void cancelPressed() {
-	super.cancelPressed();
-}
+	public void set(Image questionImg,Question question){
+		this.questionImg=questionImg;
+		this.question=question;
 
-public QuestionComposite getFrm() {
-	return frm;
-}
-
-public void set(Image questionImg,Question question){
-	this.questionImg=questionImg;
-	this.question=question;
-
-}
+	}
 
 
 

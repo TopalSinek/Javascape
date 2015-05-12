@@ -5,8 +5,6 @@ import org.abstractmeta.toolbox.compilation.compiler.impl.JavaSourceCompilerImpl
 
 public class CompileJavaCode {
 
-	
-		
 		public static Class compile(String javaCode)throws Exception{
 			
 				JavaSourceCompiler javaSourceCompiler = new JavaSourceCompilerImpl();

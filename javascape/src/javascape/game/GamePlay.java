@@ -260,11 +260,6 @@ public class GamePlay {
 			}
 
 
-
-
-
-
-
 		}
 
 		//draw user 
